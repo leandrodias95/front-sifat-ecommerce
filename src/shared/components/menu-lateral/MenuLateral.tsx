@@ -2,7 +2,7 @@ import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, List
 import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
 import { Box } from '@mui/system';
 
-import { useDrawerContext } from '../../contexts';
+import { useAppThemeContext, useDrawerContext } from '../../contexts';
 
 interface IListItemLinkProps {
   to: string;
@@ -33,8 +33,8 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
 };
 
 
-interface IAppThemeProviderProps{
-	children: React.ReactNode;
+interface IAppThemeProviderProps {
+  children: React.ReactNode;
 }
 
 export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
@@ -42,7 +42,7 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { isDrawerOpen, drawerOptions, toggleDrawerOpen } = useDrawerContext();
-
+  const { toggleTheme } = useAppThemeContext()
   return (
     <>
       <Drawer open={isDrawerOpen} variant={smDown ? 'temporary' : 'permanent'} onClose={toggleDrawerOpen}>
@@ -51,7 +51,7 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
           <Box width="100%" height={theme.spacing(20)} display="flex" alignItems="center" justifyContent="center">
             <Avatar
               sx={{ height: theme.spacing(12), width: theme.spacing(12) }}
-              src="https://d1fdloi71mui9q.cloudfront.net/4uG8Q5GvSlSV2KOfEe3R_5quUB54bW7DDVwYA"
+              src="https://blogdoenem.com.br/wp-content/uploads/2016/03/1-30.gif"
             />
           </Box>
 
@@ -71,6 +71,17 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
             </List>
           </Box>
 
+          <Box>
+            <List component="nav">
+              <ListItemButton onClick={toggleTheme}>
+                <ListItemIcon>
+                  <Icon>dark_mode</Icon>
+                </ListItemIcon>
+                <ListItemText primary="Alternar tema" />
+              </ListItemButton>
+            </List>
+          </Box>
+
         </Box>
       </Drawer>
 
@@ -80,3 +91,4 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
     </>
   );
 };
+
