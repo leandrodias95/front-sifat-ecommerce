@@ -17,7 +17,7 @@ A aplicação permite realizar **CRUD completo** (criar, ler, atualizar e deleta
 
 ### Com o que foi construído?
 
-- React 18
+- React 19
 - TypeScript
 - React Router DOM v6
 - Axios
