@@ -1,32 +1,27 @@
-import { ThemeProvider } from "@emotion/react";
-import { Box } from "@mui/material";
-import {
-	type ReactNode,
-	createContext,
-	useCallback,
-	useContext,
-	useMemo,
-	useState,
-} from "react";
-import { DarkTheme, LightTheme } from "../themes";
+import { createContext, useCallback, useContext, useMemo, useState } from 'react';
+import { ThemeProvider } from '@mui/material';
+import { Box } from '@mui/system';
+
+import { DarkTheme, LightTheme } from './../themes';
 
 interface IThemeContextData {
-	themeName: "light" | "dark";
-	toggleTheme: () => void;
+  themeName: 'light' | 'dark';
+  toggleTheme: () => void;
 }
-interface IAppThemeProviderProps {
-	children: ReactNode;
-}
+
 const ThemeContext = createContext({} as IThemeContextData);
 
 export const useAppThemeContext = () => {
-	return useContext(ThemeContext);
+  return useContext(ThemeContext);
 };
 
-export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({
-	children,
-}) => {
-	const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
+interface IAppThemeProviderProps{
+  children: React.ReactNode
+}
+
+
+export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children }) => {
+  const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
 
   const toggleTheme = useCallback(() => {
     setThemeName(oldThemeName => oldThemeName === 'light' ? 'dark' : 'light');

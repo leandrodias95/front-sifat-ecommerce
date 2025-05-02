@@ -1,0 +1,154 @@
+{
+  "produtos": [
+    {
+      "id": "3",
+      "nome": "Notebook Dell XPS 18",
+      "preco": 7999.99,
+      "categoriaId": 1
+    },
+    {
+      "id": "5",
+      "nome": "Smartphone Samsung Galaxy S21",
+      "preco": 3599.9,
+      "categoriaId": 2
+    },
+    {
+      "id": "7",
+      "nome": "Cafeteira Expresso Oster",
+      "preco": 499.99,
+      "categoriaId": 3
+    },
+    {
+      "id": "8",
+      "nome": "TV LG 50 polegadas 4K",
+      "preco": 2699,
+      "categoriaId": 4
+    },
+    {
+      "id": "10",
+      "nome": "Monitor Gamer AOC 144Hz",
+      "preco": 1199.9,
+      "categoriaId": 6
+    },
+    {
+      "id": "11",
+      "nome": "Teclado Mecânico Redragon",
+      "preco": 349,
+      "categoriaId": 1
+    },
+    {
+      "id": "12",
+      "nome": "Mouse Gamer Logitech",
+      "preco": 299,
+      "categoriaId": 2
+    },
+    {
+      "id": "13",
+      "nome": "Fone Bluetooth JBL",
+      "preco": 499,
+      "categoriaId": 3
+    },
+    {
+      "id": "14",
+      "nome": "Cadeira Gamer ThunderX3",
+      "preco": 1299,
+      "categoriaId": 4
+    },
+    {
+      "id": "154",
+      "nome": "Impressora HP DeskJet",
+      "preco": 449,
+      "categoriaId": 5
+    },
+    {
+      "id": "16",
+      "nome": "Ar-condicionado Split Springer",
+      "preco": 1999,
+      "categoriaId": 6
+    },
+    {
+      "id": "156",
+      "nome": "Smartwatch Amazfit Bip U",
+      "preco": 379.9,
+      "categoriaId": 1
+    },
+    {
+      "id": "157",
+      "nome": "Caixa de Som Echo Dot",
+      "preco": 349,
+      "categoriaId": 7
+    },
+    {
+      "id": "9f3e",
+      "categoriaId": 8,
+      "preco": 25,
+      "nome": "amora"
+    },
+    {
+      "id": "d5b0",
+      "categoriaId": 3,
+      "preco": 25,
+      "nome": "amora"
+    },
+    {
+      "id": "8cd1",
+      "categoriaId": 3,
+      "preco": 25,
+      "nome": "teste"
+    },
+    {
+      "id": "4d67",
+      "categoriaId": 3,
+      "preco": 33,
+      "nome": "teste"
+    },
+    {
+      "id": "b627",
+      "categoriaId": 2,
+      "preco": 25,
+      "nome": "camisa"
+    }
+  ],
+  "cidades": [
+    {
+      "id": "1",
+      "nome": "São Paulo"
+    },
+    {
+      "id": "2",
+      "nome": "Campinas"
+    },
+    {
+      "id": "3",
+      "nome": "Santos"
+    },
+    {
+      "id": "4",
+      "nome": "Ribeirão Preto"
+    },
+    {
+      "id": "5",
+      "nome": "São José dos Campos"
+    },
+    {
+      "id": "6",
+      "nome": "Sorocaba"
+    },
+    {
+      "id": "7",
+      "nome": "Bauru"
+    },
+    {
+      "id": "8",
+      "nome": "Presidente Prudente"
+    },
+    {
+      "id": "c2e4",
+      "nome": "acai"
+    },
+    {
+      "id": "5a3f",
+      "nome": "teste"
+    }
+  ]
+}

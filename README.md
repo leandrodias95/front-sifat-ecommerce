@@ -1,54 +1,92 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Sifat E-commerce - Frontend
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto é uma aplicação web de gestão de produtos e categorias para um e-commerce, construída com foco em requisitos técnicos para um desafio de frontend com React.  
+A aplicação permite realizar **CRUD completo** (criar, ler, atualizar e deletar) tanto de **produtos** quanto de **categorias**, com paginação, filtros e formulário validado.
 
-## Expanding the ESLint configuration
+### O que faz o app?
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Listagem paginada de produtos e categorias
+- Filtro de busca para produtos e categorias
+- Cadastro, edição e exclusão de registros
+- Integração completa com uma API REST Spring Boot
+- Interface amigável com Material UI
+- Validação de formulários com Yup e Unform
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Com o que foi construído?
+
+- React 18
+- TypeScript
+- React Router DOM v6
+- Axios
+- Yup + Unform
+- Material UI
+- Vite
+- Context API para o menu lateral
+
+### Por que foi construído?
+
+Este projeto foi desenvolvido como parte de um **desafio técnico frontend**, com foco em boas práticas, componentização, integrações com API REST real, responsividade e experiência do usuário.
+
+---
+
+## Instruções de Instalação
+
+### Pré-requisitos
+
+- Node.js 18+
+- NPM 9+
+- Git
+- Backend rodando localmente (porta 8080)
+
+### Etapas
+
+```bash
+# Clone o repositório
+git clone https://github.com/leandrodias95/sifatecommerce.git
+
+# Acesse a pasta do projeto
+cd sifat-ecommerce
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Instruções de Uso
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Inicie o backend Spring Boot na porta `8080`
+2. Rode o frontend com `npm run dev`
+3. Acesse [http://localhost:5173](http://localhost:5173) no navegador
+
+---
+
+## Diferenciais
+
+- Utilização inicial com **JSON Server** para mock de API RESTful, facilitando o desenvolvimento antes da integração com backend real.
+- Após validação do fluxo, o sistema foi completamente migrado para **integração com Spring Boot** com paginação, busca e persistência real.
+- Uso de Material UI com responsividade e navegação fluida.
+- Separação de camadas de serviços, layouts, formulários e hooks personalizados.
+
+---
+
+## Licença
+
+Este projeto é de uso educacional e livre para estudo e aprendizado.
+
+- ✅ Permissão para uso não comercial
+- ✅ Pode servir de base para estudos e projetos próprios
+- ❌ Não utilizar em projetos comerciais sem autorização
+
+---
+
+## Contribuição
+
+Este repositório não está aceitando contribuições externas no momento por se tratar de um desafio técnico individual.  
+Sinta-se à vontade para clonar, estudar, adaptar e utilizar como inspiração para seus próprios projetos.

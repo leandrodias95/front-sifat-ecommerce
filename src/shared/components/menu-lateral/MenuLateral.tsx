@@ -31,18 +31,18 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
     </ListItemButton>
   );
 };
-
-
-interface IAppThemeProviderProps {
-  children: React.ReactNode;
+interface IAppThemeProviderProps{
+  children: React.ReactNode
 }
+
 
 export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { isDrawerOpen, drawerOptions, toggleDrawerOpen } = useDrawerContext();
-  const { toggleTheme } = useAppThemeContext()
+  const { toggleTheme } = useAppThemeContext();
+
   return (
     <>
       <Drawer open={isDrawerOpen} variant={smDown ? 'temporary' : 'permanent'} onClose={toggleDrawerOpen}>
@@ -51,7 +51,7 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
           <Box width="100%" height={theme.spacing(20)} display="flex" alignItems="center" justifyContent="center">
             <Avatar
               sx={{ height: theme.spacing(12), width: theme.spacing(12) }}
-              src="https://blogdoenem.com.br/wp-content/uploads/2016/03/1-30.gif"
+              src="https://d1fdloi71mui9q.cloudfront.net/4uG8Q5GvSlSV2KOfEe3R_5quUB54bW7DDVwYA"
             />
           </Box>
 
@@ -81,7 +81,6 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
               </ListItemButton>
             </List>
           </Box>
-
         </Box>
       </Drawer>
 
@@ -91,4 +90,3 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
     </>
   );
 };
-

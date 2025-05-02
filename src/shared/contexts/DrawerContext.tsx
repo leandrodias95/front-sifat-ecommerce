@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useCallback, useContext, useState } from 'react';
+import { createContext, useCallback, useContext, useState } from 'react';
 
 interface IDrawerOption {
   icon: string;
@@ -19,12 +19,11 @@ export const useDrawerContext = () => {
   return useContext(DrawerContext);
 };
 
-
 interface IAppThemeProviderProps{
-	children: React.ReactNode;
+  children: React.ReactNode
 }
 
-export const DrawerProvider: React.FC<IAppThemeProviderProps> =({ children }) => {
+export const DrawerProvider: React.FC<IAppThemeProviderProps> = ({ children }) => {
   const [drawerOptions, setDrawerOptions] = useState<IDrawerOption[]>([]);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
