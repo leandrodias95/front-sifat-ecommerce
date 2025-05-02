@@ -45,7 +45,7 @@ Este projeto foi desenvolvido como parte de um **desafio técnico frontend**, co
 
 ```bash
 # Clone o repositório
-git clone https://github.com/leandrodias95/sifatecommerce.git
+git clone https://github.com/leandrodias95/front-sifat-ecommerce.git
 
 # Acesse a pasta do projeto
 cd sifat-ecommerce
